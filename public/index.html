@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171329">
+  <meta name="description" content="Internet Flow network connectivity monitoring by DiverseVisualArtsStudioLLC.">
+  <title>Internet Flow | DVASLLC</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="mark">IF</span><span>INTERNET <b>FLOW</b><small>BY DIVERSEVISUALARTSSTUDIOLLC</small></span></a>
+    <span class="live-label"><i></i> NETWORK MONITOR</span>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">CONNECTIVITY • VISIBILITY • CONTROL</p>
+      <h1>Keep your network<br><span>in the flow.</span></h1>
+      <p class="intro">Check whether a public server is reachable, measure connection latency, and keep an eye on service health.</p>
+    </section>
+    <section class="panel">
+      <div class="panel-heading"><div><p class="eyebrow">LIVE CONNECTIVITY CHECK</p><h2>Test a destination</h2></div><span class="shield">TCP</span></div>
+      <form id="check-form">
+        <label>Hostname<input id="host" name="host" placeholder="example.com" autocomplete="url" required></label>
+        <div class="field-row">
+          <label>Port<input id="port" name="port" type="number" min="1" max="65535" value="443" required></label>
+          <label>Timeout<input id="timeout" name="timeout" type="number" min="500" max="15000" step="500" value="5000" required></label>
+        </div>
+        <button id="check-button" type="submit">Run connectivity check <span>→</span></button>
+      </form>
+      <p class="fine-print">Checks TCP reachability only. It does not measure your personal Wi-Fi speed or guarantee that an application is functioning correctly.</p>
+      <div id="result" class="result" role="status" aria-live="polite"><span class="result-dot"></span><span>Ready when you are. Enter a hostname to begin.</span></div>
+    </section>
+    <section class="info-grid">
+      <article class="info-card"><span class="icon">01</span><h3>Reachability</h3><p>See whether a public host accepts a TCP connection on the selected port.</p></article>
+      <article class="info-card"><span class="icon">02</span><h3>Latency</h3><p>Review the approximate time required to establish the connection.</p></article>
+      <article class="info-card"><span class="icon">03</span><h3>Service health</h3><p>Use the health endpoint to integrate basic checks with deployment platforms.</p></article>
+    </section>
+    <footer>© <span id="year"></span> DiverseVisualArtsStudioLLC · Internet Flow</footer>
+  </main>
+</body>
+</html>
